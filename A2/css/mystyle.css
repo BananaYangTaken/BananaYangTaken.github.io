@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+  .wrapper
+  {
+    display: block;
+  }
+  #wrapper.active
+  {
+    display: none;
+  }
+
+  /*Header Stuff*/
+  .header-container
+  {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 2vw 2vh 2vw;
+  } 
+  /*Animation Code*/
+  @keyframes Animation1 
+  {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+  /*Set logo image*/
+  #Logo1
+  {
+    height: 8vmin;
+    animation-name: Animation1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay:0s;
+    display: flex;
+    align-self: center;
+    cursor: pointer;   /* Changes how the cursor looks when hovering over the book*/
+  }
+  #Logo2
+  {
+    margin-left: 10%; 
+    height: 2vmin;
+    display: flex;
+    align-self: center;
+    margin: 1vw;
+  }
+  /*Menu*/
+  #closemenu>p
+  {
+    color: #f7fff7;
+    text-decoration: none;
+    font-size: 2vmin;
+    display: flex;
+    align-self: center;
+  }
+  #menu
+  {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-self: center;
+  }
+  #closemenu
+  {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-self: center;
+    cursor: pointer;   
+  }
+  .active > #closemenu, #openmenu{
+    display: none;
+  }
+  .active > #openmenu
+  {
+    position: absolute;
+    background:gray;
+    width:30vw;
+    height:50vh;
+    top: 30vh;
+    left:35vw;
+    display: grid;
+    grid-template-rows: 10% 22.5% 22.5% 22.5% 22.5%;
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  #Logo3
+  {
+    align-self: right;
+    width: 2vmin;
+    height: 2vmin;
+    margin: 1vmin;
+    background:gray;
+    cursor: pointer;
+    grid-row: 0;
+    grid-column: 1;
+  }
+  .active > #openmenu > div > a
+  {
+    text-decoration: none;
+    font-size: 2.5vmin;
+    color: #f7fff7;
+    background-color: gray;
+    width: 80%;
+    margin: 2vmin 2vmin 0 2vmin;
+    height: 3vmin;
+    padding-bottom: 3vmin;
+    text-align: center;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: white;
+  }
+  .active > #openmenu > div > a:hover
+  {
+    color: #6ca6c1;
+  }
+  
+  .active > #openmenu > div > a#MenuLastLink
+  {
+    border-style: none;
+  }
+ 
+  /*Main Stuff*/
+  .PageTitle
+  {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    height: 20vmin;
+    width: 75%;
+    margin: 10% 12.5% 5% 12.5%;
+    color: #f7fff7;
+  }
+  .PageTitle > h1
+  {
+    text-align: left;
+    width: 100%;
+    font-size: 4.5vmin;
+    padding-bottom: 4%;
+    border-bottom: 2px;
+    border-style: solid;
+  }
+
+  .PageTitle > p
+  {
+    margin-top: 4%;
+    text-align: left;
+    width: 75vw;
+    font-size: 2.5vmin;
+  }
+  .Image1
+  {
+    height: 40vmin;
+    transform: rotateZ(-15deg) scale(1.1);
+  }
+  .Image2
+  {
+    height: 50vmin;
+    transform: rotateZ(-15deg) scale(1.1);
+  }
+  .Image1.active
+  {
+    height: 40vmin;
+    transform: rotateZ(15deg) scale(1.1);
+  }
+  .Image2.active
+  {
+    height: 50vmin;
+    transform: rotateZ(15deg) scale(1.1);
+  }
+  .Box-Title{
+    text-align: center;
+  }
+
+
+  /*Book Stuff*/
+  .bookcase{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    margin-top: 10vmin
+  }
+  
+  .book {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 50%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 30vmin;
+    cursor: pointer;   /* Changes how the cursor looks when hovering over the book*/
+    backface-visibility: visible;
+  }
+  .booktitle
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    color: #f7fff7;
+    border: 1px;
+    border-style: solid;
+    font-size: 1.5vmin;
+  }
+  .booktitle.active
+  {
+    display: none;
+  }
+  
+  .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 20vmin;
+    height: 100%;
+    top: 0; left: 0;
+    transform-origin: left center;
+    transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+  }
+  
+  .front, .back {
+    background: navy;
+  }
+  
+  /* Gives the book front and back covers as well as pages a rounded*/
+  .front, .back, .page1, .page2, .page3, .page4, .page5, .page6{
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+  }
+  
+  
+  .page1,.page2,.page3,.page4,.page5,.page6 { 
+    background: #f7fff7;
+  }
+  
+  
+  .front.active {
+    transform: rotateY(-170deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .page1.active  {
+    transform: rotateY(-165deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .page2.active  {
+    transform: rotateY(-160deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .page3.active  {
+    transform: rotateY(-155deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .page4.active {
+    transform: rotateY(-150deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+
+  .page4.active, .page3.active {
+    border-left: 0.1vmin;
+    border-style: groove;
+    border-color: #575757;
+  }
+  
+  .page5.active  {
+    transform: rotateY(-20deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .page6.active  {
+    transform: rotateY(-15deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .back.active  {
+    transform: rotateY(-10deg) scale(1.1);
+  }
+
+  /*Grid*/
+  .Grid-Container-1
+  {
+    display: grid;
+    grid-template-rows: 22.75% 22.75% 22.75% 22.75%;
+    grid-template-columns: 40% 20% 40%;
+    height: 300vmin;
+    grid-row-gap: 3%;
+    background-color: darkcyan;
+    /*
+    border-top: 4px;
+    border-style: solid;
+    border-color: #f7fff7;
+    */
+    padding-top: 10%;
+    
+  }
+  .Grid-Container-2
+  {
+    display: grid;
+    grid-template-rows: 20% 20% 10% 41%;
+    grid-template-columns: 40% 10% 10% 40%;
+    height: 500vmin;
+    grid-row-gap: 3%;
+    background-color: darkcyan;
+    padding-top: 10%;
+    
+  }
+  .Grid-Container-Format
+  {
+    display: grid;
+    grid-template-rows: 10% 15% 10% 55%;
+    grid-template-columns: 100%;
+    height: 150vmin;
+    background-color: #343434;
+  }
+  .Grid-Container-Format > h1
+  {
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    margin: 3% 5% 0 5%;
+    background-color: #343434;
+  
+    color: #f7fff7;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+  .Grid-Container-Format > p
+  {
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    margin: 3% 5% 0 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 2vmin;
+  }
+  .Format-Container
+  {
+    padding: 5%;
+  }
+  .Row1
+  {
+    grid-row: 1;
+  }
+  .Row2
+  {
+    grid-row: 2;
+  }
+  .Row3
+  {
+    grid-row: 3;
+  }
+  .Row4
+  {
+    grid-row: 4;
+  }
+  .Row5
+  {
+    grid-row: 5;
+  }
+  .Column1
+  {
+    grid-column: 1;
+  }
+  .Column2
+  {
+    grid-column: 2;
+  }
+  .Column3
+  {
+    grid-column: 3;
+  }
+  .Column4
+  {
+    grid-column: 4;
+  }
+  .Column5
+  {
+    grid-column: 5;
+  }
+  .Column1Span2
+  {
+    grid-column: 1 / span 2;
+  }
+  .Column2Span2
+  {
+    grid-column: 2 / span 2;
+  }
+  .Column3Span2
+  {
+    grid-column: 3 / span 2;
+  }
+  .Column1Span3
+  {
+    grid-column: 1 / span 3;
+  }
+  .Column2Span3
+  {
+    grid-column: 2 / span 3;
+  }
+
+  /*Flex*/
+  .Flex-Container-openmenu
+  {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 3% 5% 0 5%;
+    background-color: #343434;
+  }
+  .Flex-Container-1
+  {
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    margin: 3% 5% 0 5%;
+    background-color: #343434;
+  }
+  .Flex-Container-1 > h1 , .Flex-Container-2 > h1
+  {
+    width: 20%;
+    margin: 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+  .Flex-Container-1 > p, .Flex-Container-2 > p 
+  {
+    width: 60%;
+    margin: 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 2vmin;
+  }
+  .Flex-Container-1.Intro > p  
+  { 
+    width: 90%;
+    margin: 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 2vmin;
+  }
+
+
+  .HistoryBottom
+  {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+    width: 90%;
+    height: 90%;
+    margin: 3% 5% 0 5%;
+    background-color: #343434;
+  }
+
+  .HistoryBottom > h1
+  {
+    display:flex;
+    align-self: center;
+    justify-content: center;
+    width: 90%;
+    margin: 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+
+  .HistoryBottom > p
+  {
+    width: 90%;
+    margin: 5%;
+    background-color: #343434;
+    color: #f7fff7;
+    font-size: 2vmin;
+  }
+  .Flex-Container-2 > p > strong
+  {
+    font-style: underline;
+
+  }
+  .Flex-Container-2
+  {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    flex-wrap: nowrap;
+  }
+  .Flex-Container-2.align-item-left
+  {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 5% 5% 5% 0;
+    align-items: left;
+  }
+  .Flex-Container-2.align-item-right
+  {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 5% 0 5% 5%;
+    align-items: right ;
+  }
+  /*Background*/
+  .GrayBG
+  {
+    background-color:gray;
+  }
+  .DarkCyanBG
+  {
+    background-color:darkcyan;
+  }
+  .BlueBG
+  {
+    background: #212743; /*2F3061*/
+  }

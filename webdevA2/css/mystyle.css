@@ -1,0 +1,1016 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 1440px){
+  #Burger-Menu
+  {
+    display: none;
+  }
+  #Bar-Menu
+  {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-self: center;
+    overflow: hidden;
+  }
+
+  #Bar-Menu > a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 42px 1%;
+    font-size: 2.5vmin;
+    text-decoration: none;
+    transition: background-color 2s ,color 2s, text-decoration 2s, padding-left 2s, padding-right 2s;
+  }
+
+  #Bar-Menu a:hover {
+    background-color: #4974a5;
+    color: white;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  #Bar-Menu a.active {
+    background-color: #4a919e;
+    color: white;
+  }
+  #wrapper.active
+  {
+    display: block;
+  }
+  .Grid-Container-1
+  {
+    display: grid;
+    grid-template-rows: 7.4% 14.6% 7.4% 14.6% 7.4% 14.6% 7.4% 14.6%;
+    grid-template-columns: 40% 20% 40%;
+    height: 400vmin;
+    grid-row-gap: 1.7%;
+    background-color: darkcyan;
+    padding-top: 10%;
+    
+  }    
+  .Grid-Container-1 > .Grid-Box-1
+  {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    
+  }
+  .Grid-Container-1 > .Grid-Box-2
+  {
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-3
+  {
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-4
+  {
+    grid-row: 3 / span 2;
+    grid-column: 3;
+  }
+  .Grid-Container-1 > .Grid-Box-5
+  {
+    grid-row: 5 / span 2;
+    grid-column: 1;
+  }
+  .Grid-Container-1 > .Grid-Box-6
+  {
+    grid-row: 5 / span 2;
+    grid-column: 2 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-7
+  {
+    grid-row: 7 / span 2;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-8
+  {
+    grid-row: 7 / span 2;
+    grid-column: 3;
+  }
+  .Grid-Container-2
+  {
+    display: grid;
+    grid-template-rows: 20% 20% 10% 41%;
+    grid-template-columns: 40% 10% 10% 40%;
+    height: 500vmin;
+    grid-row-gap: 3%;
+    background-color: darkcyan;
+    padding-top: 10%;
+    
+  }
+  .Grid-Container-2 > .Grid-Box-1
+  {
+    grid-row: 1;
+    grid-column: 1;
+    
+  }
+  .Grid-Container-2 > .Grid-Box-2
+  {
+    grid-row: 1;
+    grid-column: 2 / span 3;
+  }
+  .Grid-Container-2 > .Grid-Box-3
+  {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .Grid-Container-2 > .Grid-Box-4
+  {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+  }
+  .Grid-Container-2 > .Grid-Box-5
+  {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-6
+  {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-7
+  {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-8
+  {
+    grid-row: 4;
+    grid-column: 3 / span 2;
+  }
+  .Image1
+  {
+    height: 35vmin;
+    width: 35vmin;
+    transform: rotateZ(-15deg) scale(1.1);
+  }
+  .Image1.active
+  {
+    transform: rotateZ(15deg) scale(1.1);
+  }
+  .book {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 50%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;   /* Changes how the cursor looks when hovering over the book*/
+    backface-visibility: visible;
+    height: 30vmin;
+    width: 20vmin;
+  }
+  .booktitle
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    color: #f7fff7;
+    border: 1px;
+    border-style: solid;
+    font-size: 1.5vmin;
+  }
+  .bookshelf{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    margin-top: 10vmin;
+    background-image: url(../images/Bookshelf1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .page4 > p, .page3 > p {
+    font-size: 1.6vmin;
+    margin: 5%;
+  }
+  .page4 > img{
+    margin: 2%;
+    width: 96%;
+    height: 96%;
+  } 
+}
+@media screen and (max-width: 720px) {
+  #Burger-Menu
+  {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-self: center;
+  }
+  #Bar-Menu
+  {
+    display: none;
+  }
+  #wrapper.active
+  {
+    display: none;
+  }
+  .Grid-Container-1 > .Grid-Box-1
+  {
+    grid-row: 1 / span 2;
+    grid-column: 3;
+    
+  }
+  .Grid-Container-1 > .Grid-Box-2
+  {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-3
+  {
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-4
+  {
+    grid-row: 3 / span 2;
+    grid-column: 1;
+  }
+  .Grid-Container-1 > .Grid-Box-5
+  {
+    grid-row: 5 / span 2;
+    grid-column: 3;
+  }
+  .Grid-Container-1 > .Grid-Box-6
+  {
+    grid-row: 5 / span 2;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-7
+  {
+    grid-row: 7 / span 2;
+    grid-column: 2 / span 2;
+  }
+  .Grid-Container-1 > .Grid-Box-8
+  {
+    grid-row: 7 / span 2;
+    grid-column: 1;
+  }
+  .Grid-Container-2 > .Grid-Box-1
+  {
+    grid-row: 1;
+    grid-column: 4;
+    
+  }
+  .Grid-Container-2 > .Grid-Box-2
+  {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-2 > .Grid-Box-3
+  {
+    grid-row: 2;
+    grid-column: 4;
+  }
+  .Grid-Container-2 > .Grid-Box-4
+  {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-2 > .Grid-Box-5
+  {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-6
+  {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-7
+  {
+    grid-row: 4;
+    grid-column: 3 / span 2;
+  }
+  .Grid-Container-2 > .Grid-Box-8
+  {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+  .Image1
+  {
+    height: 25vmin;
+    width: 25vmin;
+    transform: rotateZ(-15deg) scale(1.1);
+  }
+  .Image1.active
+  {
+    transform: rotateZ(15deg) scale(1.1);
+  }
+  .book2
+  {
+    display: none;     
+  }
+  .book4
+  {
+    display: none;
+    
+  }
+  .bookshelf
+  {
+    background-image: url(../images/Bookshelf2.png);
+    background-size: 100% 50%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Grid-Container-1
+  {
+    display: grid;
+    grid-template-rows: 7.4% 14.6% 7.4% 14.6% 7.4% 14.6% 7.4% 14.6%;
+    grid-template-columns: 40% 20% 40%;
+    height: 400vmin;
+    grid-row-gap: 1.7%;
+    background-color: darkcyan;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .Grid-Container-1 > .Grid-Box-1
+  {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    
+  }
+  .Grid-Container-1 > .Grid-Box-2
+  {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-3
+  {
+    grid-row: 4;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-4
+  {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-5
+  {
+    grid-row: 5;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-6
+  {
+    grid-row: 6;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-7
+  {
+    grid-row: 8;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-1 > .Grid-Box-8
+  {
+    grid-row: 7;
+    grid-column: 1 / span 3;
+  }
+  .Grid-Container-2
+  {
+    display: grid;
+    grid-template-rows: 5% 15% 5% 15% 5% 20.5% 5% 20.5%;
+    grid-template-columns: 40% 10% 10% 40%;
+    height: 600vmin;
+    grid-row-gap: 1.2%;
+    background-color: darkcyan;
+    padding-top: 10%;
+    
+  }
+  .Grid-Container-2 > .Grid-Box-1
+  {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+    
+  }
+  .Grid-Container-2 > .Grid-Box-2
+  {
+    grid-row: 2;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-3
+  {
+    grid-row: 3;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-4
+  {
+    grid-row: 4;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-5
+  {
+    grid-row: 5;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-6
+  {
+    grid-row: 7;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-7
+  {
+    grid-row: 6;
+    grid-column: 1 / span 4;
+  }
+  .Grid-Container-2 > .Grid-Box-8
+  {
+    grid-row: 8;
+    grid-column: 1 / span 4;
+  }
+  .book 
+  {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4;
+    height: 60vmin;
+    width: 40vmin;
+  }
+  .Deck > .book 
+  {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4;
+    height: 30vmin;
+    width: 20vmin;
+  }
+  .booktitle
+  {
+    font-size: 3vmin;
+  }
+  .Deck  > .book  > .front > .booktitle 
+  {
+    font-size: 1.5vmin;
+  }
+  .book3
+  {
+    display: none;
+  }
+  .bookshelf{
+    background-image: url(../images/Bookshelf2.png);
+    background-size: 100% 100%;
+  }
+  .page4 > p, .page3 > p {
+    font-size: 3.2vmin;
+  } 
+}
+
+footer {
+  height: 20vmin;
+}
+.wrapper
+{
+  display: block;
+}
+
+/*Header Stuff*/
+.header-container
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 2vh 2vw 2vh 2vw;
+} 
+/*Animation Code*/
+@keyframes Animation1 
+{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+/*Set logo image*/
+#Logo1
+{
+  height: 8vmin;
+  animation-name: Animation1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay:0s;
+  display: flex;
+  align-self: center;
+  cursor: pointer;   /* Changes how the cursor looks when hovering over the book*/
+}
+#Logo2
+{
+  margin-left: 10%; 
+  height: 2vmin;
+  display: flex;
+  align-self: center;
+  margin: 1vw;
+}
+/*Menu*/
+#closemenu>p
+{
+  color: #f7fff7;
+  text-decoration: none;
+  font-size: 2vmin;
+  display: flex;
+  align-self: center;
+}
+#closemenu
+{
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-self: center;
+  cursor: pointer;   
+  margin-right: 4%;
+}
+.active > #closemenu, #openmenu{
+  display: none;
+}
+.active > #openmenu
+{
+  position: absolute;
+  background:gray;
+  width:30vw;
+  height:50vh;
+  top: 30vh;
+  left:35vw;
+  display: grid;
+  grid-template-rows: 10% 22.5% 22.5% 22.5% 22.5%;
+  grid-template-columns: 20% 60% 20%;
+}
+
+#Logo3
+{
+  align-self: end;
+  width: 2vmin;
+  height: 2vmin;
+  padding: 1vmin;
+  background-color:gray;
+  cursor: pointer;
+  grid-row: 1;
+  grid-column: 1;
+}
+#Logo3:hover
+{
+  align-self: end;
+  width: 2vmin;
+  height: 2vmin;
+  padding: 1vmin;
+  background-color:red;
+  cursor: pointer;
+  grid-row: 1;
+  grid-column: 1;
+}
+.active > #openmenu > div > a
+{
+  text-decoration: none;
+  font-size: 2.5vmin;
+  color: #f7fff7;
+  background-color: gray;
+  width: 80%;
+  margin: 2vmin 2vmin 0 2vmin;
+  height: 3vmin;
+  padding-bottom: 3vmin;
+  text-align: center;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: white;
+}
+.active > #openmenu > div > a:hover
+{
+  color: #6ca6c1;
+}
+
+.active > #openmenu > div > a#MenuLastLink
+{
+  border-style: none;
+}
+
+/*Main Stuff*/
+.PageTitle
+{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  height: 20vmin;
+  width: 75%;
+  margin: 10% 12.5% 5% 12.5%;
+  color: #f7fff7;
+}
+.PageTitle > h1
+{
+  text-align: left;
+  width: 100%;
+  font-size: 4.5vmin;
+  padding-bottom: 4%;
+  border-bottom: 2px;
+  border-style: solid;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.PageTitle > p
+{
+  margin-top: 4%;
+  text-align: left;
+  width: 75vw;
+  font-size: 2.5vmin;
+  grid-row: 2;
+  grid-column: 1;
+}
+.PageTitle.Lower > h1
+{
+  text-align: left;
+  width: 100%;
+  font-size: 4.5vmin;
+  padding-bottom: 4%;
+  border-bottom: 2px;
+  border-style: solid;
+  grid-row: 2;
+  grid-column: 1;
+}
+.Deck-Title
+{
+  display:flex;
+  justify-content: center;
+  align-self: start;
+  color: white;
+  font-size: 2.5vmin;
+  
+}
+
+
+/*Book Stuff*/
+
+.booktitle.active
+{
+  display: none;
+}
+
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+  justify-content: center;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.front, .back {
+  background: navy;
+}
+
+/* Gives wrounded edge*/
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6{
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+
+.page1,.page2,.page3,.page4,.page5,.page6 { 
+  background: #f7fff7;
+}
+
+
+.front.active {
+  transform: rotateY(-170deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page1.active  {
+  transform: rotateY(-165deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page2.active  {
+  transform: rotateY(-160deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page3.active  {
+  transform: rotateY(-155deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page4.active {
+  transform: rotateY(-25deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page4.active, .page3.active {
+  border-left: 0.1vmin;
+  border-style: groove;
+  border-color: #575757;
+}
+
+.page3 > p
+{
+  transform: rotateY(-180deg);
+}
+
+.page5.active  {
+  transform: rotateY(-20deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.page6.active  {
+  transform: rotateY(-15deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.back.active  {
+  transform: rotateY(-10deg) scale(1.1);
+}
+
+
+/* Game CSS */
+#Deck-20thCen > .book > .front.active , #Deck-21stCen > .book > .front.active , #Sort-Deck > .book > .front.active
+{
+  display: block;
+  transform: rotateY(0deg);
+}
+#Deck-20thCen > .book > .front , #Deck-21stCen > .book > .front , #Sort-Deck > .book > .front
+{
+  display: none;
+}
+
+/*Grid*/
+
+.Grid-Container-Format
+{
+  display: grid;
+  grid-template-rows: 10% 15% 10% 55%;
+  grid-template-columns: 100%;
+  height: 150vmin;
+  background-color: #343434;
+}
+.Grid-Container-Format1
+{
+  display: grid;
+  grid-template-rows: 20% 15% 65%;
+  grid-template-columns: 100%;
+  height: 120vmin;
+  background-color: #343434;
+}
+.Grid-Container-Format > h1, .Grid-Container-Format1 > h1
+{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #343434;
+
+  color: #f7fff7;
+  font-size: 3vmin;
+  font-weight: bold;
+}
+.Grid-Container-Format > p,.Grid-Container-Format1 > p
+{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 2vmin;
+}
+.Format-Container
+{
+  padding: 5%;
+}
+.Grid-Container-Test
+{
+  display: grid;
+  height: 100vmin;
+  width: 90%;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 50% 50%;
+}
+.Grid-Container-Buttons
+{
+  display: grid;
+  grid-template-columns: 30% 5% 15% 15% 5% 30%;
+  grid-template-rows: 45% 45%;
+  grid-column: 3;
+  grid-row: 2;
+  margin: 5%;
+  background-color: #212743;
+  width: 90%;
+  height: 90%;
+  grid-row-gap: 10%;
+  border: 0.5vmin;
+  border-style: solid;
+  border-color: white;
+}
+.Row1
+{
+  grid-row: 1;
+}
+.Row2
+{
+  grid-row: 2;
+}
+.Row3
+{
+  grid-row: 3;
+}
+.Row4
+{
+  grid-row: 4;
+}
+.Row5
+{
+  grid-row: 5;
+}
+.Column1
+{
+  grid-column: 1;
+}
+.Column2
+{
+  grid-column: 2;
+}
+.Column3
+{
+  grid-column: 3;
+}
+.Column4
+{
+  grid-column: 4;
+}
+.Column6
+{
+  grid-column: 6;
+}
+.Column1Span2
+{
+  grid-column: 1 / span 2;
+}
+.Column2Span2
+{
+  grid-column: 2 / span 2;
+}
+.Column3Span2
+{
+  grid-column: 3 / span 2;
+}
+
+
+/*Flex*/
+.Flex-Container-openmenu
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #343434;
+}
+.Flex-Container-1
+{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #343434;
+}
+.Flex-Container-1 > h1 , .Flex-Container-2 > h1
+{
+  width: 20%;
+  margin: 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 3vmin;
+  font-weight: bold;
+}
+.Flex-Container-1 > p, .Flex-Container-2 > p 
+{
+  width: 60%;
+  margin: 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 2vmin;
+}
+.Flex-Container-1.Intro > p  
+{ 
+  width: 90%;
+  margin: 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 2vmin;
+}
+
+
+.HistoryBottom
+{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 85%;
+  width: 90%;
+  height: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #343434;
+}
+
+.HistoryBottom > h1
+{
+  display:flex;
+  align-self: center;
+  justify-content: center;
+  width: 90%;
+  margin: 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 3vmin;
+  font-weight: bold;
+}
+
+.HistoryBottom > p
+{
+  width: 90%;
+  margin: 5%;
+  background-color: #343434;
+  color: #f7fff7;
+  font-size: 2vmin;
+}
+.Flex-Container-2
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  margin: 5% 5% 0% 5%;
+  
+  flex-wrap: nowrap;
+}
+.Center-Container
+{
+  display:flex;
+  justify-content: center;
+  align-self: center;
+  color:rgb(138, 179, 255);
+}
+.CenterImage{
+  display:flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+.CenterImage.active{
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+.Flex-Container-3.active
+{
+  display:flex;
+  align-self: center;
+}
+.Flex-Container-3
+{
+  display:none;
+}
+/*Background*/
+.GrayBG
+{
+  background-color:gray;
+}
+.DarkCyanBG
+{
+  background-color:darkcyan;
+}
+.BlueBG
+{
+  background: #212743; /*2F3061*/
+}
+.RedBG
+{
+  background: #ff0000; /*2F3061*/
+}
+.GreenBG
+{
+  background: #00ff00; /*2F3061*/
+}

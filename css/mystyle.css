@@ -142,7 +142,7 @@ img.default {
     height: 60vh;
     padding: 12vh 0vh 12vh 0vh;
 }
-.Portfolio-Content{
+.Projects-Content{
     background-color: white;
     display: grid;
     grid-template-columns: 5% 30% 5% 55% 5%;

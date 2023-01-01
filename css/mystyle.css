@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Grid-Col-1{
+    grid-column: 1; 
+}
+.Grid-Col-2{
+    grid-column: 2; 
+}
+.Grid-Col-3{
+    grid-column: 3; 
+}
+.Grid-Col-4{
+    grid-column: 4; 
+}
+.Grid-Col-5{
+    grid-column: 5; 
+}
+.Grid-Col-6{
+    grid-column: 6; 
+}
+.Grid-Col-2-Span-3{
+    grid-column: 2 / 5;
+}
+.Grid-Col-1-Span-2{
+    grid-column: 1 / 3;
+}
+.Grid-Row-1{
+    grid-row: 1; 
+}
+.Grid-Row-2{
+    grid-row: 2; 
+}
+.Grid-Row-3{
+    grid-row: 3; 
+}
+.Grid-Row-4{
+    grid-row: 4; 
+}
+.Grid-Row-5{
+    grid-row: 5; 
+}
+.Grid-Row-6{
+    grid-row: 6; 
+}
+.Flex-Container-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Flex-Container-2{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+.Flex-Container-3{
+    padding-top: 8vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+}
+.Flex-Container-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.Flex-Container-2 > h1
+{
+    width: 60%;
+    font-size: 2vw;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.Flex-Container-3 > p
+{
+    width: 60%;
+    font-size: 1vw;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.Justify-Content-Left{
+    justify-content: center;
+}
+.Justify-Content-Right{
+    justify-content: center;
+}
+/*navigation bar bg*/
+.NavBar {
+    background-color: #363636;
+    display:grid;
+    grid-template-columns: 32% 10% 16% 10% 32%;
+    grid-template-rows: 100%;
+    height: 15vh;
+}
+/*For links*/
+.NavBar > div > a {
+    color: #f2f2f2;
+    font-size: 1vw;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: text-decoration 2s ,font-size 2s;
+    padding-top: 4vw;
+}
+/* When hovering over link highlight the link */
+.NavBar div > a:hover {
+    font-size: 1.5vw;
+} 
+/* highlight the current link user is at */
+.NavBar > div > a.Active {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+} 
+/*Set logo image*/
+img.logo {
+    width: 8vw;
+    height: 6vw;
+    padding-bottom: 3vw;
+}
+img.default {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+.About-Content{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 100%;
+    height: 60vh;
+    padding: 12vh 0vh 12vh 0vh;
+}
+.Skills-Content{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    grid-template-rows: 100%;
+    height: 60vh;
+    padding: 12vh 0vh 12vh 0vh;
+}
+.Portfolio-Content{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 5% 30% 5% 55% 5%;
+    grid-template-rows: 47.5% 5% 47.5%;
+    height: 180vh;
+    padding: 12vh 0vh 12vh 0vh;
+}
+.Grid-Container-1
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+.Grid-Container-2
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    background-color: #f2f2f2;
+}
+.Grid-Container-3
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    background-color: #f2f2f2;
+}
+.Grid-Container-4
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background-color: #f2f2f2;
+}
